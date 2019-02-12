@@ -1,0 +1,35 @@
+/* AZUL UGM: #012269 */
+/* Verde #00c9c6 */
+/* Rojo #EA2045 */
+
+.question{
+    background-color: #012269;
+    color: white;
+    padding: 24px 15px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.question div{
+    width: 150px;
+    background-color: white;
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    margin: 0 auto 15px;
+}
+.answer{
+    background-color: white;
+    border: 2px solid #012269;
+    margin: 15px 0;
+    display: flex;
+    line-height: 50px;
+    cursor: pointer;
+}
+.answer div {
+    width: 50px;
+    height: 50px;
+    background-color: #012269;
+    color: white;
+    text-align: center;
+    margin-right: 21px;
+}
