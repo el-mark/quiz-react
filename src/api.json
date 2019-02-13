@@ -1,0 +1,16 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "statement": "¿Te gusta trabajar en la computadora?"
+        },
+        {
+            "id": 2,
+            "statement": "¿Te gusta leer?"
+        },
+        {
+            "id": 3,
+            "statement": "¿Te gusta escribir?"
+        }
+    ] 
+}

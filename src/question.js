@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import './question.css';
 
 class Question extends Component {
+    state = {
+        questions: this.props.questions,
+        questionNum: 1,
+        questionTot: this.props.questions.length,
+        questionId: this.props.questions[0].id,
+        questionStatement: this.props.questions[0].statement,
+        results: {}
+    }
     handleClick = (event) => {
         console.log(event.target.getAttribute('value'))
     }
@@ -9,8 +17,8 @@ class Question extends Component {
         return(
             <div>
                 <div className="question">
-                    <div>Pregunta {this.props.questionNum}</div>
-                    {this.props.questionStatement}
+                    <div>Pregunta {this.state.questionNum}/{this.state.questionTot}</div>
+                    {this.state.questionStatement}
                 </div>
                 <div className="answer" onClick={this.handleClick} value="1">
                     <div>1</div>
