@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import './start.css';
 
 class Start extends Component {
     render() {
         return(
         <div>
-            <div class="start-logo">
+            <div className="start-logo">
                 Logo
             </div>
-            <div class="start-text">
+            <div className="start-text">
                 ¿Quieres saber con qué carreras tienes más afinidad?   
             </div>
-            <div class="start-button">
+            <div className="start-button" onClick={this.props.handleClick}>
                 Dale
             </div>
         </div>
