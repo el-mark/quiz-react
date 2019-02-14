@@ -1,0 +1,22 @@
+.start-logo{
+    background-color: #5a5a5a;
+    color: white;
+    padding: 24px 15px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.start-text{
+    background-color: white;
+    border: 2px solid #012269;
+    margin: 15px 0;
+    text-align: center;
+    padding: 20px 15px;
+}
+.start-button{
+    background-color: #012269;
+    color: white;
+    padding: 24px 15px;
+    text-align: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
