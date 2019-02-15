@@ -6,11 +6,16 @@ import Start from '../quiz/start';
 
 class Home extends Component {
     state = {
-        step: 1,
+        step: 2,
     }
-    handleNextStep = () => {
+    handleQuizStep = () => {
         this.setState({
             step: 2,
+        })
+    }
+    handleResultsStep = () => {
+        this.setState({
+            step: 3,
         })
     }
     render(){
@@ -18,11 +23,14 @@ class Home extends Component {
             <div className="layout">
                 {
                     this.state.step === 1 &&
-                    <Start handleClick={this.handleNextStep} />
+                    <Start handleClick={this.handleQuizStep} />
                 }
                 {
                     this.state.step === 2 &&
-                    <Question questions={this.props.data.questions} />
+                    <Question 
+                        questions={this.props.data.questions}  
+                        handleResultsStep={this.handleResultsStep}
+                    />
                 }
             </div>
         )
