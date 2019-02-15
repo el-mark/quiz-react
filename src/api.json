@@ -2,7 +2,7 @@
     "questions": [
         {
             "id": 0,
-            "statement": "¿Te gusta trabajar en la computadora?"
+            "statement": "¿Disfrutas trabajar en la computadora?"
         },
         {
             "id": 1,
@@ -10,13 +10,26 @@
         },
         {
             "id": 2,
-            "statement": "¿Te gusta resolver problemas?"
+            "statement": "¿Te interesa resolver problemas?"
+        },
+        {
+            "id": 3,
+            "statement": "¿Te gusta leer?"
+        },
+        {
+            "id": 4,
+            "statement": "¿Disfrutas conversando con personas?"
+        },
+        {
+            "id": 5,
+            "statement": "¿Te atraen los negocios?"
         }
     ],
     "degrees": [
         {
-            "id": 1,
-            "title": "Diseño Gráfico",
+            "id": 0,
+            "title": "Animación y diseño Digital",
+            "img": "background-image: url('../../images/animacion.jpg');",
             "points": [
                 {
                     "question": 0,
@@ -29,8 +42,9 @@
             ]
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "Desarrollador de Software",
+            "img": "background-image: url('../../images/desarrollo-de-software.jpg');",
             "points": [
                 {
                     "question": 0,
@@ -38,6 +52,55 @@
                 },
                 {
                     "question": 2,
+                    "coef": 0.5
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Derecho",
+            "img": "background-image: url('../../images/derecho.jpg');",
+            "points": [
+                {
+                    "question": 2,
+                    "coef": 0.3
+                },
+                {
+                    "question": 3,
+                    "coef": 0.7
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Psicología",
+            "img": "background-image: url('../../images/psicologia.jpg');",
+            "points": [
+                {
+                    "question": 2,
+                    "coef": 0.3
+                },
+                {
+                    "question": 4,
+                    "coef": 0.7
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Ingeniería Comercial",
+            "img": "background-image: url('../../images/ingenieria-comercial.jpg');",
+            "points": [
+                {
+                    "question": 0,
+                    "coef": 0.25
+                },
+                {
+                    "question": 2,
+                    "coef": 0.25
+                },
+                {
+                    "question": 4,
                     "coef": 0.5
                 }
             ]

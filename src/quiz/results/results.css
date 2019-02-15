@@ -6,7 +6,8 @@
     margin-bottom: 24px;
 }
 .degree{
-    background-image: url('../../images/animacion-p.jpg');
+    /* background-image: url('../../images/animacion-p.jpg'); */
+    background-color: #012269;
     background-position: center;
     background-size: cover;
     margin: 15px 0;
