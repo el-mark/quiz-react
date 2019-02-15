@@ -1,15 +1,15 @@
 {
     "questions": [
         {
-            "id": 1,
+            "id": 0,
             "statement": "¿Te gusta trabajar en la computadora?"
         },
         {
-            "id": 2,
+            "id": 1,
             "statement": "¿Te gusta dibujar?"
         },
         {
-            "id": 3,
+            "id": 2,
             "statement": "¿Te gusta resolver problemas?"
         }
     ],
@@ -19,11 +19,11 @@
             "title": "Diseño Gráfico",
             "points": [
                 {
-                    "question": 1,
+                    "question": 0,
                     "coef": 0.5
                 },
                 {
-                    "question": 2,
+                    "question": 1,
                     "coef": 0.5
                 }
             ]
@@ -33,11 +33,11 @@
             "title": "Desarrollador de Software",
             "points": [
                 {
-                    "question": 1,
+                    "question": 0,
                     "coef": 0.5
                 },
                 {
-                    "question": 3,
+                    "question": 2,
                     "coef": 0.5
                 }
             ]

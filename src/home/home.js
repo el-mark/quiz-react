@@ -8,7 +8,8 @@ import Results from '../quiz/results/results';
 class Home extends Component {
     state = {
         step: 2,
-        results: {}
+        results: {},
+        degrees: []
     }
     handleQuizStep = () => {
         this.setState({
@@ -19,19 +20,45 @@ class Home extends Component {
         this.setState({
             step: 3,
         })
-        this.calculateResults();
+        this.calculateScores();
     }
-    calculateResults() {
-        let results = this.state.results;
-        console.log('this.state.results');
-        console.log(this.state.results);
-        console.log('Function calculateResults')
-        this.props.data.degrees.forEach(degree => {
-            degree.points.forEach(point => {
-                
-                console.log('this.props.results');
-            })
+    updateResults = (results) => {
+        this.setState({
+            results: results,
         })
+    }
+    calculateScores = () => {
+        var newDegrees = this.state.degrees;
+
+        this.props.data.degrees.map(degree => {
+            let degreePoints = 0;
+            degree.points.map(point => {
+                const sectionPoints = this.state.results[point.question].value * point.coef;
+                degreePoints = degreePoints + sectionPoints;
+            })
+            degree.score = degreePoints * 20;
+            
+            newDegrees.push(degree);
+        })
+        
+        const sortedNewDegrees = this.sortNewDegrees(newDegrees);
+
+        console.log(sortedNewDegrees);
+
+        this.setState({
+            degrees: sortedNewDegrees,
+        })
+    }
+    sortNewDegrees = (newDegrees) => {
+        function compare(a,b) {
+            if (a.score > b.score)
+              return -1;
+            if (a.score < b.score)
+              return 1;
+            return 0;
+          }
+          
+          return newDegrees.sort(compare);
     }
     render(){
         return(
@@ -44,13 +71,13 @@ class Home extends Component {
                     this.state.step === 2 &&
                     <Question 
                         questions={this.props.data.questions}
-                        results={this.state.results}
+                        updateResults={this.updateResults}
                         handleResultsStep={this.handleResultsStep}
                     />
                 }
                 {
                     this.state.step === 3 &&
-                    <Results />
+                    <Results degrees={this.state.degrees} />
                 }
             </div>
         )

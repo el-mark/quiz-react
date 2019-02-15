@@ -8,13 +8,19 @@ class Results extends Component {
                 <div className="start-logo">
                     Carreras con más afinidad:
                 </div>
-                <div className="degree">
-                    <div className="degree-cover">
-                        <div className="degree-text">
-                            Dise - 95pts
-                        </div>
-                    </div>
-                </div>
+                {
+                    this.props.degrees.map((degree) => {
+                        return(
+                            <div className="degree" key={degree.id}>
+                                <div className="degree-cover">
+                                    <div className="degree-text">
+                                        {degree.title} - {degree.score}
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
             </div>
         )
     }

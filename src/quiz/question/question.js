@@ -12,9 +12,9 @@ class Question extends Component {
     }
     handleSelectAnwer = (event) => {
         const chosenValue = event.target.getAttribute('value');
+        
         const results = this.generateResults(chosenValue);
-
-        // this.props.results = results;
+        this.props.updateResults(results);
         
         if (this.state.questionNum + 1 !== this.state.questionTot) {
             const nextQuestionNum = this.state.questionNum + 1;
@@ -33,14 +33,11 @@ class Question extends Component {
 
     }
     generateResults = (chosenValue) => {
-        console.log('inside GenerateResults');
         const thisResult = {
             "id": this.state.questionId,
             "statement": this.state.questionStatement,
             "value": chosenValue
         }
-        console.log('thisResult');
-        console.log(thisResult);
         var results = this.state.results;
         results.push(thisResult);
         return results;
@@ -52,24 +49,24 @@ class Question extends Component {
                     <div>Pregunta {this.state.questionNum+1}/{this.state.questionTot}</div>
                     {this.state.questionStatement}
                 </div>
-                <div className="answer" onClick={this.handleSelectAnwer} value="1">
-                    <div>1</div>
+                <div className="answer" onClick={this.handleSelectAnwer} value="5">
+                    <div>5</div>
                     Me encanta
                 </div>
-                <div className="answer" onClick={this.handleSelectAnwer} value="2">
-                    <div>2</div>
+                <div className="answer" onClick={this.handleSelectAnwer} value="4">
+                    <div>4</div>
                     Me gusta
                 </div>
                 <div className="answer" onClick={this.handleSelectAnwer} value="3">
                     <div>3</div>
                     Neutral
                 </div>
-                <div className="answer" onClick={this.handleSelectAnwer} value="4">
-                    <div>4</div>
+                <div className="answer" onClick={this.handleSelectAnwer} value="2">
+                    <div>2</div>
                     No me gusta
                 </div>
-                <div className="answer" onClick={this.handleSelectAnwer} value="5">
-                    <div>5</div>
+                <div className="answer" onClick={this.handleSelectAnwer} value="1">
+                    <div>1</div>
                     Lo detesto
                 </div>
             </div>
