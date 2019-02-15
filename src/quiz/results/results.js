@@ -17,7 +17,7 @@ class Results extends Component {
                             <div className="degree" key={degree.id} style={degreeStyle}>
                                 <div className="degree-cover">
                                     <div className="degree-text">
-                                        {degree.title} - {degree.score}
+                                        {degree.title} - {Math.round(degree.score)} pts
                                     </div>
                                 </div>
                             </div>
