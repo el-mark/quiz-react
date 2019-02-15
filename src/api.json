@@ -29,7 +29,7 @@
         {
             "id": 0,
             "title": "Animación y diseño Digital",
-            "img": "background-image: url('../../images/animacion.jpg');",
+            "img": "url('src/images/animacion.jpg')",
             "points": [
                 {
                     "question": 0,
@@ -44,7 +44,7 @@
         {
             "id": 1,
             "title": "Desarrollador de Software",
-            "img": "background-image: url('../../images/desarrollo-de-software.jpg');",
+            "img": "url('src/images/desarrollo-de-software.jpg')",
             "points": [
                 {
                     "question": 0,
@@ -59,7 +59,7 @@
         {
             "id": 2,
             "title": "Derecho",
-            "img": "background-image: url('../../images/derecho.jpg');",
+            "img": "url('src/images/derecho.jpg')",
             "points": [
                 {
                     "question": 2,
@@ -74,7 +74,7 @@
         {
             "id": 3,
             "title": "Psicología",
-            "img": "background-image: url('../../images/psicologia.jpg');",
+            "img": "url('src/images/psicologia.jpg')",
             "points": [
                 {
                     "question": 2,
@@ -89,7 +89,7 @@
         {
             "id": 4,
             "title": "Ingeniería Comercial",
-            "img": "background-image: url('../../images/ingenieria-comercial.jpg');",
+            "img": "url('src/images/ingenieria-comercial.jpg')",
             "points": [
                 {
                     "question": 0,

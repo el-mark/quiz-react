@@ -7,7 +7,7 @@ import Results from '../quiz/results/results';
 
 class Home extends Component {
     state = {
-        step: 2,
+        step: 1,
         results: {},
         degrees: []
     }
@@ -28,6 +28,9 @@ class Home extends Component {
         })
     }
     calculateScores = () => {
+        console.log('this.state.results');
+        console.log(this.state.results);
+
         var newDegrees = this.state.degrees;
 
         this.props.data.degrees.map(degree => {
@@ -43,6 +46,7 @@ class Home extends Component {
         
         const sortedNewDegrees = this.sortNewDegrees(newDegrees);
 
+        console.log('sortedNewDegrees');
         console.log(sortedNewDegrees);
 
         this.setState({

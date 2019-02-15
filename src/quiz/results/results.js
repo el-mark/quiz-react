@@ -10,8 +10,11 @@ class Results extends Component {
                 </div>
                 {
                     this.props.degrees.map((degree) => {
+                        const degreeStyle = {
+                            backgroundImage: degree.img
+                        }
                         return(
-                            <div className="degree" key={degree.id}>
+                            <div className="degree" key={degree.id} style={degreeStyle}>
                                 <div className="degree-cover">
                                     <div className="degree-text">
                                         {degree.title} - {degree.score}
