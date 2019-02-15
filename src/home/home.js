@@ -8,6 +8,7 @@ import Results from '../quiz/results/results';
 class Home extends Component {
     state = {
         step: 2,
+        results: {}
     }
     handleQuizStep = () => {
         this.setState({
@@ -18,8 +19,19 @@ class Home extends Component {
         this.setState({
             step: 3,
         })
+        this.calculateResults();
     }
     calculateResults() {
+        let results = this.state.results;
+        console.log('this.state.results');
+        console.log(this.state.results);
+        console.log('Function calculateResults')
+        this.props.data.degrees.forEach(degree => {
+            degree.points.forEach(point => {
+                
+                console.log('this.props.results');
+            })
+        })
     }
     render(){
         return(
@@ -32,7 +44,7 @@ class Home extends Component {
                     this.state.step === 2 &&
                     <Question 
                         questions={this.props.data.questions}
-                        results={this.props.results}
+                        results={this.state.results}
                         handleResultsStep={this.handleResultsStep}
                     />
                 }

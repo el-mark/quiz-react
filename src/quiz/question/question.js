@@ -14,7 +14,7 @@ class Question extends Component {
         const chosenValue = event.target.getAttribute('value');
         const results = this.generateResults(chosenValue);
 
-        this.results = results;
+        // this.props.results = results;
         
         if (this.state.questionNum + 1 !== this.state.questionTot) {
             const nextQuestionNum = this.state.questionNum + 1;

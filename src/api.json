@@ -6,11 +6,41 @@
         },
         {
             "id": 2,
-            "statement": "¿Te gusta leer?"
+            "statement": "¿Te gusta dibujar?"
         },
         {
             "id": 3,
-            "statement": "¿Te gusta escribir?"
+            "statement": "¿Te gusta resolver problemas?"
         }
-    ] 
+    ],
+    "degrees": [
+        {
+            "id": 1,
+            "title": "Diseño Gráfico",
+            "points": [
+                {
+                    "question": 1,
+                    "coef": 0.5
+                },
+                {
+                    "question": 2,
+                    "coef": 0.5
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Desarrollador de Software",
+            "points": [
+                {
+                    "question": 1,
+                    "coef": 0.5
+                },
+                {
+                    "question": 3,
+                    "coef": 0.5
+                }
+            ]
+        }
+    ]
 }
