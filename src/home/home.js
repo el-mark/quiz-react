@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './home.css';
-import Question from '../quiz/question';
-import Start from '../quiz/start';
+import Question from '../quiz/question/question';
+import Start from '../quiz/start/start';
+import Results from '../quiz/results/results';
 
 
 class Home extends Component {
@@ -18,6 +19,8 @@ class Home extends Component {
             step: 3,
         })
     }
+    calculateResults() {
+    }
     render(){
         return(
             <div className="layout">
@@ -28,9 +31,14 @@ class Home extends Component {
                 {
                     this.state.step === 2 &&
                     <Question 
-                        questions={this.props.data.questions}  
+                        questions={this.props.data.questions}
+                        results={this.props.results}
                         handleResultsStep={this.handleResultsStep}
                     />
+                }
+                {
+                    this.state.step === 3 &&
+                    <Results />
                 }
             </div>
         )
